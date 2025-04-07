@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="trg_Detalii_Comanda_BRIU" directorySegmentName="seg_0" id="F703F84B-AE78-409C-D69A-C3EE286C6528">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 13:26:26 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<actions>INSERT, UPDATE</actions>
+<body><![CDATA[BEGIN
+	IF(:new.data_livrare <= SYSDATE )
+	THEN
+		RAISE_APPLICATION_ERROR(-20001,
+			'Data invalida: ' || TO_CHAR(:new.data_livrare, 'DD:MM:YYYY HH24:MI:SS') || ' trebuie sa fie mai mare decat data curenta. ');
+	END IF;
+END;	]]></body>
+<triggerTime>BEFORE</triggerTime>
+<table>56CDDDA1-3B62-EE39-7255-0CED6197B95C</table>
+</TriggerOraclev10g>

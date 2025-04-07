@@ -1,0 +1,25 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="trig_cpu_gpu_BRIU1" directorySegmentName="seg_0" id="A95B1874-FF8E-96B0-E4BB-837023F225B4">
+<createdBy>user</createdBy>
+<createdTime>2024-12-27 14:47:08 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<actions>INSERT, UPDATE</actions>
+<body><![CDATA[DECLARE
+    v_gpu_pcie_slot NUMBER(1);
+    v_cpu_pcie_slot NUMBER(1);
+BEGIN
+    SELECT slot_pcie INTO v_gpu_pcie_slot
+    FROM gpu
+    WHERE gpu_id = :new.gpu_gpu_id;
+    SELECT slot_pcie INTO v_cpu_pcie_slot
+    FROM cpu
+    WHERE cpu_id = :new.cpu_cpu_id;
+    IF v_gpu_pcie_slot != 0 THEN
+        IF v_gpu_pcie_slot != v_cpu_pcie_slot THEN
+            RAISE_APPLICATION_ERROR(-20001, 'slot pcie invalid');
+        END IF;
+    END IF;
+END;]]></body>
+<triggerTime>BEFORE</triggerTime>
+<table>1D847B60-118F-2D40-6AB4-FF4921E68D56</table>
+</TriggerOraclev10g>

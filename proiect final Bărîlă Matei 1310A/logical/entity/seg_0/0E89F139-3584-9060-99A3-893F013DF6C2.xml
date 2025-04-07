@@ -1,0 +1,136 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0E89F139-3584-9060-99A3-893F013DF6C2" name="Comanda">
+<createdBy>user</createdBy>
+<createdTime>2024-10-26 08:41:26 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<engineerTo>
+<item key="930489C5-81E3-14B3-59F4-315DD34F31F8" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="c_id" id="825F3F4C-DF43-BF55-6B50-525479AA39C7">
+<createdBy>user</createdBy>
+<createdTime>2024-10-26 08:41:32 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<engineerTo>
+<item key="930489C5-81E3-14B3-59F4-315DD34F31F8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email" id="B89A172A-8C24-9DA1-D76F-A7316AF5D794">
+<createdBy>user</createdBy>
+<createdTime>2024-10-26 08:42:40 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<engineerTo>
+<item key="930489C5-81E3-14B3-59F4-315DD34F31F8" value="true"/>
+</engineerTo>
+<constraintName>comanda_email_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>320</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(email, &apos;[a-z0-9._%-]+@[a-z0-9._%-]+\.[a-z]{2,4}&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>320,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data" id="EC1E068A-65DC-4AAE-CAD0-09649BAAE976">
+<createdBy>user</createdBy>
+<createdTime>2024-10-26 08:43:11 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<engineerTo>
+<item key="930489C5-81E3-14B3-59F4-315DD34F31F8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ram_id" id="E4857030-977F-1592-3EAF-ACC8A7B06B73">
+<createdBy>user</createdBy>
+<createdTime>2024-11-05 12:38:50 UTC</createdTime>
+<generatorID>F865FE88-EB55-0947-18F4-DF6C2EC87575</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<engineerTo>
+<item key="930489C5-81E3-14B3-59F4-315DD34F31F8" value="true"/>
+</engineerTo>
+<referedAttribute>CCACC8DF-7369-28C3-FDE4-57253517F0A6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="gpu_id" id="043243F4-65AC-B4EF-ABCD-465FE1D1A71B">
+<createdBy>user</createdBy>
+<createdTime>2024-11-05 12:39:03 UTC</createdTime>
+<generatorID>578B213B-D8B5-5281-2423-E33794A2D250</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<engineerTo>
+<item key="930489C5-81E3-14B3-59F4-315DD34F31F8" value="true"/>
+</engineerTo>
+<referedAttribute>E50FFC8C-63BC-505F-8B14-57CCEC3BFED8</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cpu_id" id="3FC26164-BFD8-AC18-D985-B398DCDCE353">
+<createdBy>user</createdBy>
+<createdTime>2024-11-05 12:39:13 UTC</createdTime>
+<generatorID>B9567367-ED6B-9952-1CC8-E4FCE3AF583E</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<engineerTo>
+<item key="930489C5-81E3-14B3-59F4-315DD34F31F8" value="true"/>
+</engineerTo>
+<referedAttribute>589FEAF3-9D44-9D69-34F2-46F13C72E97E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="d_id" id="BBC31BB5-7FCF-53A8-7DE3-B01B5393FAC3">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:45:18 UTC</createdTime>
+<generatorID>6634FEC1-8A7D-3CDD-A5FD-33941516BB56</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<engineerTo>
+<item key="930489C5-81E3-14B3-59F4-315DD34F31F8" value="true"/>
+</engineerTo>
+<referedAttribute>7541C32F-57DE-DAA6-AAC8-3BD93C8500B9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="941917B8-DFE5-AF4E-821D-71CD0580DBBE" name="Comanda_PK">
+<createdBy>user</createdBy>
+<createdTime>2024-10-26 08:41:39 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="930489C5-81E3-14B3-59F4-315DD34F31F8" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>825F3F4C-DF43-BF55-6B50-525479AA39C7</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

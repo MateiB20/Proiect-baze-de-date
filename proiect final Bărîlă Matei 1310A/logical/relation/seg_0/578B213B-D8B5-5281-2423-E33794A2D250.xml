@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Comanda_GPU_fk" directorySegmentName="seg_0" id="578B213B-D8B5-5281-2423-E33794A2D250">
+<createdBy>user</createdBy>
+<createdTime>2024-11-05 12:39:03 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<engineerTo>
+<item key="930489C5-81E3-14B3-59F4-315DD34F31F8" value="true"/>
+</engineerTo>
+<sourcePk>7ED58C1F-F631-5458-A292-6B667F774D88</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>face parte din</nameOnSource>
+<nameOnTarget>contine o componenta</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>96C2A006-0D81-B34D-5FDF-63CC2FA170D2</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>0E89F139-3584-9060-99A3-893F013DF6C2</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

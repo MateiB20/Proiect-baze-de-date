@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1D847B60-118F-2D40-6AB4-FF4921E68D56" name="CPU_GPU">
+<createdBy>user</createdBy>
+<createdTime>2024-10-26 09:09:31 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CPU_cpu_id" id="0AF94C76-3592-A1FF-C942-EFD3D36E50C9">
+<createdBy>user</createdBy>
+<createdTime>2024-10-26 09:09:31 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="467E6BAE-0A9F-1462-2F14-324FA9DE7068" referredColumn="8AB9680A-255B-7A17-0FDC-CC7873AD9D7A"/>
+</associations>
+</Column>
+<Column name="GPU_gpu_id" id="FA9A90FE-C983-70E6-91DC-0A6CB1828712">
+<createdBy>user</createdBy>
+<createdTime>2024-10-26 09:09:31 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="133C300A-C1F1-B33B-5086-E1F3FA4FECBA" referredColumn="5E66EF02-18A3-D92D-9593-F24ECF3365B5"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="72358011-F596-652D-6ECF-8DA5A85E4643" name="CPU_GPU_PK">
+<createdBy>user</createdBy>
+<createdTime>2024-10-26 09:09:31 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0AF94C76-3592-A1FF-C942-EFD3D36E50C9"/>
+<colUsage columnID="FA9A90FE-C983-70E6-91DC-0A6CB1828712"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0F83B663-BCF0-07A0-B39F-F51F4D8AA985" name="CPU_GPU_CPU_FK">
+<createdBy>user</createdBy>
+<createdTime>2024-10-26 09:09:31 UTC</createdTime>
+<generatorID>9DCC623C-E2FF-34C0-4135-DDD505E6105A</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0AF94C76-3592-A1FF-C942-EFD3D36E50C9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="536E26F8-F7A1-C17C-710D-B533110C623F" name="CPU_GPU_GPU_FK">
+<createdBy>user</createdBy>
+<createdTime>2024-10-26 09:09:31 UTC</createdTime>
+<generatorID>9DCC623C-E2FF-34C0-4135-DDD505E6105A</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FA9A90FE-C983-70E6-91DC-0A6CB1828712"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,219 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6466B801-FC0E-980A-9C3E-F7A267B81908" name="Comanda">
+<createdBy>user</createdBy>
+<createdTime>2024-10-26 09:09:31 UTC</createdTime>
+<generatorID>0E89F139-3584-9060-99A3-893F013DF6C2</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="c_id" id="A0133D16-6BC2-BF47-1F15-013362799B90">
+<createdBy>user</createdBy>
+<createdTime>2024-10-26 09:09:31 UTC</createdTime>
+<generatorID>825F3F4C-DF43-BF55-6B50-525479AA39C7</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="F8C9A3B7-7BE1-F849-2981-FE1AEB3C6589">
+<createdBy>user</createdBy>
+<createdTime>2024-10-26 09:09:31 UTC</createdTime>
+<generatorID>B89A172A-8C24-9DA1-D76F-A7316AF5D794</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<constraintName>comanda_email_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>320</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="regexp_like(email, &apos;[a-z0-9._%-]+@[a-z0-9._%-]+\.[a-z]{2,4}&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>320,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data" id="6798EAD8-EA4C-3A58-7DAD-C24815F3D76C">
+<createdBy>user</createdBy>
+<createdTime>2024-10-26 09:09:31 UTC</createdTime>
+<generatorID>EC1E068A-65DC-4AAE-CAD0-09649BAAE976</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ram_id" id="629428A8-A913-EA4D-963E-459C4E4ADB1A">
+<createdBy>user</createdBy>
+<createdTime>2024-11-05 12:39:23 UTC</createdTime>
+<generatorID>E4857030-977F-1592-3EAF-ACC8A7B06B73</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="51E38E8A-75C2-DBB8-6114-B5456047AAF5" referredColumn="72F05F7D-B223-43A6-ECD5-431B075A73E6"/>
+</associations>
+</Column>
+<Column name="gpu_id" id="BDC663A5-37BC-3D80-889F-AA6C23138EB0">
+<createdBy>user</createdBy>
+<createdTime>2024-11-05 12:39:23 UTC</createdTime>
+<generatorID>043243F4-65AC-B4EF-ABCD-465FE1D1A71B</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8D9190EB-6A69-7B71-A329-3A7CABBAD8F8" referredColumn="5E66EF02-18A3-D92D-9593-F24ECF3365B5"/>
+</associations>
+</Column>
+<Column name="cpu_id" id="EC552C9D-F902-BA4F-09F1-09F6B421FE3E">
+<createdBy>user</createdBy>
+<createdTime>2024-11-05 12:39:23 UTC</createdTime>
+<generatorID>3FC26164-BFD8-AC18-D985-B398DCDCE353</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="11692028-462D-5FC3-0122-EB806CEE127A" referredColumn="8AB9680A-255B-7A17-0FDC-CC7873AD9D7A"/>
+</associations>
+</Column>
+<Column name="d_id" id="33F81DCC-92EC-28B1-AE22-904CEC776867">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:45:38 UTC</createdTime>
+<generatorID>BBC31BB5-7FCF-53A8-7DE3-B01B5393FAC3</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CFBB23A2-DE77-56F6-FAD9-70D09CB0D647" referredColumn="0F873973-57E4-222A-7150-BE3ECBCB32FD"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CB8CFB23-58FB-5A25-7F91-DB9C22EFBAC4" name="Comanda_PK">
+<createdBy>user</createdBy>
+<createdTime>2024-10-26 09:09:31 UTC</createdTime>
+<generatorID>941917B8-DFE5-AF4E-821D-71CD0580DBBE</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A0133D16-6BC2-BF47-1F15-013362799B90"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E7A3995A-9FB3-17E4-0AC3-1175A04DD01C" name="Comanda__IDX">
+<createdBy>user</createdBy>
+<createdTime>2024-11-05 12:39:23 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>B9567367-ED6B-9952-1CC8-E4FCE3AF583E</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="EC552C9D-F902-BA4F-09F1-09F6B421FE3E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7E022A17-E7DD-2C0F-0D6E-F007972BAD01" name="Comanda__IDXv1">
+<createdBy>user</createdBy>
+<createdTime>2024-11-05 12:39:23 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>578B213B-D8B5-5281-2423-E33794A2D250</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="BDC663A5-37BC-3D80-889F-AA6C23138EB0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E5155A30-7CC0-0E47-4C17-28A2389BB9F9" name="Comanda__IDXv2">
+<createdBy>user</createdBy>
+<createdTime>2024-11-05 12:39:23 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>F865FE88-EB55-0947-18F4-DF6C2EC87575</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="629428A8-A913-EA4D-963E-459C4E4ADB1A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5F8D5A53-1FD0-38A9-C5C2-34349B3A238C" name="Comanda__IDXv3">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:45:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>6634FEC1-8A7D-3CDD-A5FD-33941516BB56</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="33F81DCC-92EC-28B1-AE22-904CEC776867"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9021B462-7B84-EACC-8A3E-859201801967" name="Comanda_CPU_fk">
+<createdBy>user</createdBy>
+<createdTime>2024-11-05 12:39:23 UTC</createdTime>
+<generatorID>B9567367-ED6B-9952-1CC8-E4FCE3AF583E</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EC552C9D-F902-BA4F-09F1-09F6B421FE3E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7C83D363-C0C7-3A17-A11A-F653C0BF67E3" name="Comanda_GPU_fk">
+<createdBy>user</createdBy>
+<createdTime>2024-11-05 12:39:23 UTC</createdTime>
+<generatorID>578B213B-D8B5-5281-2423-E33794A2D250</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BDC663A5-37BC-3D80-889F-AA6C23138EB0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DF4D72E9-A4B5-19D5-C582-09DFB5F2F20D" name="Comanda_RAM_fk">
+<createdBy>user</createdBy>
+<createdTime>2024-11-05 12:39:23 UTC</createdTime>
+<generatorID>F865FE88-EB55-0947-18F4-DF6C2EC87575</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="629428A8-A913-EA4D-963E-459C4E4ADB1A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B8B26591-B74E-993D-1AC8-D758F7B0BC4D" name="Comanda_Detalii_comanda">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:45:38 UTC</createdTime>
+<generatorID>6634FEC1-8A7D-3CDD-A5FD-33941516BB56</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="33F81DCC-92EC-28B1-AE22-904CEC776867"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="09409592-5D0C-6A73-49DC-1180CA3AAE81" name="RAM">
+<createdBy>user</createdBy>
+<createdTime>2024-10-26 09:09:31 UTC</createdTime>
+<generatorID>2CEF0E93-24CB-87ED-29B0-B9111534F1B4</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ram_id" id="72F05F7D-B223-43A6-ECD5-431B075A73E6">
+<createdBy>user</createdBy>
+<createdTime>2024-10-26 09:09:31 UTC</createdTime>
+<generatorID>CCACC8DF-7369-28C3-FDE4-57253517F0A6</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nume" id="7181C25B-A88B-91C7-5B34-8C5A93FD4BD5">
+<createdBy>user</createdBy>
+<createdTime>2024-10-26 09:09:31 UTC</createdTime>
+<generatorID>C31CF7A4-0A5D-BEF6-EDDF-F6ECAF1B57E4</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tip_memorie" id="CCA0920C-B21E-E6C3-B15D-13C491D8C08C">
+<createdBy>user</createdBy>
+<createdTime>2024-10-26 09:09:31 UTC</createdTime>
+<generatorID>6DEC12C4-61CD-ED10-E745-F17819CFFFE7</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<constraintName>ram_tip_memorie_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="tip_memorie LIKE &apos;DDR_&apos;"/>
+</checkConstraint>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7FF3173A-C644-A1B3-4D07-FBFE681C021C" name="RAM_PK">
+<createdBy>user</createdBy>
+<createdTime>2024-10-26 09:09:31 UTC</createdTime>
+<generatorID>F18531FF-82E1-41C7-AA06-3E6BA40D2474</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="72F05F7D-B223-43A6-ECD5-431B075A73E6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

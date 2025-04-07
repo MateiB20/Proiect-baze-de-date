@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Comanda_Detalii_comanda" directorySegmentName="seg_0" id="6634FEC1-8A7D-3CDD-A5FD-33941516BB56">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:45:18 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<engineerTo>
+<item key="930489C5-81E3-14B3-59F4-315DD34F31F8" value="true"/>
+</engineerTo>
+<sourcePk>B4BAB450-9702-C869-48D1-20DB347DE04A</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>ale comenzii</nameOnSource>
+<nameOnTarget>este comanda</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>811EC4E2-6F01-4755-3122-78BC31392FCD</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>0E89F139-3584-9060-99A3-893F013DF6C2</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="14E96ED0-C7B1-042C-0446-D573ED2EF9FA" containerWithKeyObject="E815E39F-14C1-8B40-1EC9-6BAB89BD123A" localFKIndex="DFA3DE30-372A-CED5-60B4-C74406A76854" name="CPU_RAM_CPU_FK">
+<createdBy>user</createdBy>
+<createdTime>2024-10-26 09:09:31 UTC</createdTime>
+<generatorID>115AE819-9BA3-BBF0-D7AD-5B7E0035568C</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<referredTableLongName>CPU</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>DF177FF5-2E39-3980-27CA-2B3378576CAA</referredTableID>
+<keyObject>0C510A2D-587F-053C-C646-EB96A2D06B89</keyObject>
+<referredKeyID>0C510A2D-587F-053C-C646-EB96A2D06B89</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>cpu_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,140 @@
+INSERT INTO ram (nume, tip_memorie)
+VALUES ('Corsair Vengeance LPX 16GB DDR4-3200', 'DDR4');
+INSERT INTO gpu (nume, slot_pcie)
+VALUES ('NVIDIA GeForce RTX 3060 Ti 8GB GDDR6', 1);
+INSERT INTO cpu (nume, tip_memorie, slot_pcie)
+VALUES ('Intel Core i7-12700K 12-Core 3.6GHz', 'DDR4', 1);
+INSERT INTO detalii_comanda (adresa, numar_telefon, data_livrare)
+VALUES('Strada Nicolae Iorga, București, România', '0712345678', 
+TO_DATE('2026-01-05 10:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO comanda (email, data, ram_id, gpu_id, cpu_id, d_id)
+VALUES (
+    'cumparator.tehnic@exemplu.ro',
+    TO_DATE('2025-12-05 14:00:00', 'YYYY-MM-DD HH24:MI:SS'), 
+    (SELECT ram_id FROM ram WHERE ram_id = 1),  
+    (SELECT gpu_id FROM gpu WHERE gpu_id = 1),
+    (SELECT cpu_id FROM cpu WHERE cpu_id = 1),  
+    (SELECT d_id FROM detalii_comanda WHERE d_id = 1)  
+);
+select r.ram_id, nume, tip_memorie from comanda cm, ram r where 
+cm.ram_id=r.ram_id; --informatii ram din comanda
+select c.cpu_id, nume, tip_memorie, slot_pcie from comanda cm, cpu c where 
+cm.cpu_id=c.cpu_id; --informatii cpu din comanda
+select g.gpu_id, nume, slot_pcie from comanda cm, gpu g where 
+cm.cpu_id=g.gpu_id; --informatii gpu din comanda
+select d.d_id, adresa, numar_telefon, data_livrare 
+from comanda cm, detalii_comanda d where cm.d_id=d.d_id; 
+--informatii tabel detalii_comanda aferenta comenzii
+select r.ram_id, r.nume, r.tip_memorie,  
+c.cpu_id, c.nume, c.tip_memorie, c.slot_pcie,
+g.gpu_id, g.nume, g.slot_pcie,
+d.d_id, d.adresa, d.numar_telefon, d.data_livrare 
+from comanda cm, ram r, cpu c, gpu g, detalii_comanda d 
+where cm.ram_id=r.ram_id and cm.cpu_id=c.cpu_id and cm.cpu_id=g.gpu_id 
+and cm.d_id=d.d_id; --informatii complete
+
+
+
+INSERT INTO cpu (nume, tip_memorie, slot_pcie)
+VALUES ('Intel Core i9-13900K 24-Core 3.0GHz', 'DDR4', 1);
+INSERT INTO ram (nume, tip_memorie)
+VALUES ('G.SKILL Ripjaws X 16GB DDR3-2400', 'DDR3');
+INSERT INTO gpu (nume, slot_pcie)
+VALUES ('NVIDIA GeForce RTX 3080 10GB GDDR6X', 1);
+INSERT INTO detalii_comanda (adresa, numar_telefon, data_livrare)
+VALUES ('Strada Ion Luca Caragiale, Cluj-Napoca, România', '0723456789', 
+TO_DATE('2026-01-05 10:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO comanda (email, data, ram_id, gpu_id, cpu_id, d_id)
+VALUES (
+    'client.tehnologie@exemplu.ro',
+    TO_DATE('2025-12-05 14:00:00', 'YYYY-MM-DD HH24:MI:SS'), 
+    (SELECT ram_id FROM ram WHERE ram_id = 2),  
+    (SELECT gpu_id FROM gpu WHERE gpu_id = 2),
+    (SELECT cpu_id FROM cpu WHERE cpu_id = 2),  
+    (SELECT d_id FROM detalii_comanda WHERE d_id = 2)  
+);--SQL Error: ORA-20001: tip memorie invalid
+
+
+
+INSERT INTO cpu (nume, tip_memorie, slot_pcie)
+VALUES ('AMD Ryzen 9 7950X 16-Core 4.5GHz', 'DDR4', 1);
+INSERT INTO ram (nume, tip_memorie)
+VALUES ('Corsair Vengeance LPX 32GB DDR4-3600', 'DDR4');
+INSERT INTO gpu (nume, slot_pcie)
+VALUES ('Intel UHD Graphics 770', 0);
+INSERT INTO detalii_comanda (adresa, numar_telefon, data_livrare)
+VALUES ('Bulevardul Unirii, București, România', '0751234567', 
+TO_DATE('2026-01-05 10:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO comanda (email, data, ram_id, gpu_id, cpu_id, d_id)
+VALUES (
+    'new.client@exemplu.ro',
+    TO_DATE('2025-12-05 14:00:00', 'YYYY-MM-DD HH24:MI:SS'), 
+    (SELECT ram_id FROM ram WHERE ram_id = 3), 
+    (SELECT gpu_id FROM gpu WHERE gpu_id = 3),
+    (SELECT cpu_id FROM cpu WHERE cpu_id = 3),  
+    (SELECT d_id FROM detalii_comanda WHERE d_id = 3) 
+);--SQL Error: ORA-20001: slot pcie invalid
+
+
+
+INSERT INTO comanda (email, data, ram_id, gpu_id, cpu_id, d_id)
+VALUES (
+    'cumparator.tehnic@exemplu.ro',
+    TO_DATE('2023-12-05 14:00:00', 'YYYY-MM-DD HH24:MI:SS'), 
+    (SELECT ram_id FROM ram WHERE ram_id = 1),  
+    (SELECT gpu_id FROM gpu WHERE gpu_id = 1),
+    (SELECT cpu_id FROM cpu WHERE cpu_id = 1),  
+    (SELECT d_id FROM detalii_comanda WHERE d_id = 1)  
+);
+--SQL Error: ORA-20001: Data invalida: 05:12:2023 14:00:00 trebuie sa fie mai mare decat data curenta.
+
+
+
+INSERT INTO detalii_comanda (adresa, numar_telefon, data_livrare)
+VALUES('Strada Nicolae Iorga, București, România', '0712345678', 
+TO_DATE('2024-01-05 10:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+--SQL Error: ORA-20001: Data invalida: 05:01:2024 10:00:00 trebuie sa fie mai mare decat data curenta.
+
+
+
+INSERT INTO comanda (email, data, ram_id, gpu_id, cpu_id, d_id)
+VALUES (
+    'invalid-email-example.com',  
+    TO_DATE('2025-12-05 14:00:00', 'YYYY-MM-DD HH24:MI:SS'),
+    (SELECT ram_id FROM ram WHERE ram_id = 1),
+    (SELECT gpu_id FROM gpu WHERE gpu_id = 1),
+    (SELECT cpu_id FROM cpu WHERE cpu_id = 1),
+    (SELECT d_id FROM detalii_comanda WHERE d_id = 1)
+);--Error report -SQL Error: null (email invalid)
+
+
+
+INSERT INTO cpu (nume, tip_memorie, slot_pcie)
+VALUES ('Intel Core i7-11700K 8-Core 3.6GHz', 'HBM', 1); 
+--Error report -ORA-02290: check constraint (BD079.CPU_TIP_MEMORIE_CK) violated
+
+
+
+INSERT INTO ram (nume, tip_memorie)
+VALUES ('Kingston ValueRAM 8GB', 'SDRAM'); 
+--Error report -ORA-02290: check constraint (BD079.RAM_TIP_MEMORIE_CK) violated
+
+
+
+INSERT INTO gpu (nume, slot_pcie)
+VALUES ('AMD Radeon RX 6800 XT', 2);
+--Error report -ORA-02290: check constraint (BD079.GPU_SLOT_PCIE_CK) violated
+
+
+
+INSERT INTO detalii_comanda (adresa, numar_telefon, data_livrare)
+VALUES ('Strada Mihai Eminescu, Timișoara, România', '123-456-7890', 
+TO_DATE('2026-01-05 10:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+--Error report -SQL Error: ORA-12899: value too large for column "BD079"."DETALII_COMANDA"."NUMAR_TELEFON" (actual: 12, maximum: 10)
+
+
+
+INSERT INTO detalii_comanda (adresa, numar_telefon, data_livrare)
+VALUES ('Strada Avram Iancu, Cluj-Napoca, România', '0623456789', 
+TO_DATE('2026-01-05 10:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+--Error report -ORA-02290: check constraint (BD079.D_C_NUMAR_TELEFON_CK) violated

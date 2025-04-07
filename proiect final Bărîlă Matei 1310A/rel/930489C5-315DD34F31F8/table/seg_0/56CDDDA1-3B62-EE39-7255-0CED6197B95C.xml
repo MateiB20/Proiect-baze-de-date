@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="56CDDDA1-3B62-EE39-7255-0CED6197B95C" name="Detalii_Comanda">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:45:38 UTC</createdTime>
+<generatorID>811EC4E2-6F01-4755-3122-78BC31392FCD</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="d_id" id="0F873973-57E4-222A-7150-BE3ECBCB32FD">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:45:38 UTC</createdTime>
+<generatorID>7541C32F-57DE-DAA6-AAC8-3BD93C8500B9</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="adresa" id="FC0D161D-0314-4D8B-C053-6941F8960D88">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:45:38 UTC</createdTime>
+<generatorID>D912BA23-1287-B1C3-C685-E827742692C8</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="numar_telefon" id="1D77A052-997C-0031-A370-402694541E0D">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:45:38 UTC</createdTime>
+<generatorID>777539A4-FB09-0A72-BE81-583FBFCC6ADA</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<constraintName>d_c_numar_telefon_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="REGEXP_LIKE(numar_telefon, &apos;^07\d{8}$&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_livrare" id="2BA4B9F6-AC5F-FC0F-ADEA-4C98B37595B4">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:45:38 UTC</createdTime>
+<generatorID>C21C65BF-D08C-7ACB-7059-C292759742B4</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="61EF2586-8662-E717-60F4-830576D00A86" name="Detalii_Comanda_PK">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:45:38 UTC</createdTime>
+<generatorID>B4BAB450-9702-C869-48D1-20DB347DE04A</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0F873973-57E4-222A-7150-BE3ECBCB32FD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

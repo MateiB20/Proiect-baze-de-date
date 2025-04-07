@@ -1,0 +1,23 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="trg_cpu_ram_BRIU1" directorySegmentName="seg_0" id="3F5AE7EB-6954-AB08-CA2C-8ACD60DC5B0E">
+<createdBy>user</createdBy>
+<createdTime>2024-12-27 14:47:56 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<actions>INSERT, UPDATE</actions>
+<body><![CDATA[DECLARE
+    v_ram_memorie VARCHAR2(5);
+    v_cpu_memorie VARCHAR2(5);
+BEGIN
+    SELECT tip_memorie INTO v_ram_memorie
+    FROM ram
+    WHERE ram_id = :new.ram_ram_id;
+    SELECT tip_memorie INTO v_cpu_memorie
+    FROM cpu
+    WHERE cpu_id = :new.cpu_cpu_id;
+    IF v_ram_memorie != v_cpu_memorie THEN
+        RAISE_APPLICATION_ERROR(-20001, 'tip memorie invalid');
+    END IF;
+END;]]></body>
+<triggerTime>BEFORE</triggerTime>
+<table>E815E39F-14C1-8B40-1EC9-6BAB89BD123A</table>
+</TriggerOraclev10g>

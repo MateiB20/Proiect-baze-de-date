@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog 
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
+	http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+<changeSet author="user" id="_10">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter="/" splitStatements="false"  stripComments="false" 
+           path="proiect4\Relational_1\Oracle_Database_12c\DataObjects\Structure_Type\MDSYS.SDO_GEOMETRY.sql"/>
+</changeSet>
+<changeSet author="user" id="_20">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter="/" splitStatements="false"  stripComments="false" 
+           path="proiect4\Relational_1\Oracle_Database_12c\DataObjects\Structure_Type\XMLTYPE.sql"/>
+</changeSet>
+<changeSet author="user" id="_30">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="proiect4\Relational_1\Oracle_Database_12c\DataObjects\Table\Comanda.sql"/>
+</changeSet>
+<changeSet author="user" id="_40">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="proiect4\Relational_1\Oracle_Database_12c\DataObjects\Table\Comanda_Constraints.sql"/>
+</changeSet>
+<changeSet author="user" id="_50">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="proiect4\Relational_1\Oracle_Database_12c\DataObjects\Table\CPU.sql"/>
+</changeSet>
+<changeSet author="user" id="_60">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="proiect4\Relational_1\Oracle_Database_12c\DataObjects\Table\CPU_Constraints.sql"/>
+</changeSet>
+<changeSet author="user" id="_70">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="proiect4\Relational_1\Oracle_Database_12c\DataObjects\Table\CPU_GPU.sql"/>
+</changeSet>
+<changeSet author="user" id="_80">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="proiect4\Relational_1\Oracle_Database_12c\DataObjects\Table\CPU_GPU_Constraints.sql"/>
+</changeSet>
+<changeSet author="user" id="_90">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="proiect4\Relational_1\Oracle_Database_12c\DataObjects\Table\CPU_RAM.sql"/>
+</changeSet>
+<changeSet author="user" id="_100">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="proiect4\Relational_1\Oracle_Database_12c\DataObjects\Table\CPU_RAM_Constraints.sql"/>
+</changeSet>
+<changeSet author="user" id="_110">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="proiect4\Relational_1\Oracle_Database_12c\DataObjects\Table\Detalii_Comanda.sql"/>
+</changeSet>
+<changeSet author="user" id="_120">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="proiect4\Relational_1\Oracle_Database_12c\DataObjects\Table\Detalii_Comanda_Constraints.sql"/>
+</changeSet>
+<changeSet author="user" id="_130">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="proiect4\Relational_1\Oracle_Database_12c\DataObjects\Table\GPU.sql"/>
+</changeSet>
+<changeSet author="user" id="_140">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="proiect4\Relational_1\Oracle_Database_12c\DataObjects\Table\GPU_Constraints.sql"/>
+</changeSet>
+<changeSet author="user" id="_150">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="proiect4\Relational_1\Oracle_Database_12c\DataObjects\Table\RAM.sql"/>
+</changeSet>
+<changeSet author="user" id="_160">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="proiect4\Relational_1\Oracle_Database_12c\DataObjects\Table\RAM_Constraints.sql"/>
+</changeSet>
+<changeSet author="user" id="_170">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="proiect4\Relational_1\Oracle_Database_12c\DataObjects\ForeignKey\Comanda_CPU_fk.sql"/>
+</changeSet>
+<changeSet author="user" id="_180">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="proiect4\Relational_1\Oracle_Database_12c\DataObjects\ForeignKey\Comanda_Detalii_comanda.sql"/>
+</changeSet>
+<changeSet author="user" id="_190">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="proiect4\Relational_1\Oracle_Database_12c\DataObjects\ForeignKey\Comanda_GPU_fk.sql"/>
+</changeSet>
+<changeSet author="user" id="_200">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="proiect4\Relational_1\Oracle_Database_12c\DataObjects\ForeignKey\Comanda_RAM_fk.sql"/>
+</changeSet>
+<changeSet author="user" id="_210">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="proiect4\Relational_1\Oracle_Database_12c\DataObjects\ForeignKey\CPU_GPU_CPU_FK.sql"/>
+</changeSet>
+<changeSet author="user" id="_220">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="proiect4\Relational_1\Oracle_Database_12c\DataObjects\ForeignKey\CPU_GPU_GPU_FK.sql"/>
+</changeSet>
+<changeSet author="user" id="_230">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="proiect4\Relational_1\Oracle_Database_12c\DataObjects\ForeignKey\CPU_RAM_CPU_FK.sql"/>
+</changeSet>
+<changeSet author="user" id="_240">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter=";" splitStatements="true"  stripComments="false" 
+           path="proiect4\Relational_1\Oracle_Database_12c\DataObjects\ForeignKey\CPU_RAM_RAM_FK.sql"/>
+</changeSet>
+<changeSet author="user" id="_250">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter="/" splitStatements="false"  stripComments="false" 
+           path="proiect4\Relational_1\Oracle_Database_12c\Code\Trigger\trg_Comanda_BRIU.pls"/>
+</changeSet>
+<changeSet author="user" id="_260">
+  <sqlFile dbms="oracle" encoding="UTF-8" endDelimiter="/" splitStatements="false"  stripComments="false" 
+           path="proiect4\Relational_1\Oracle_Database_12c\Code\Trigger\trg_Detalii_Comanda_BRIU.pls"/>
+</changeSet>
+</databaseChangeLog>

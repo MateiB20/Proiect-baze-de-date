@@ -1,0 +1,42 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="CPU" directorySegmentName="seg_0" id="DF177FF5-2E39-3980-27CA-2B3378576CAA">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="slot_pcie" id="1BEE0187-583E-2C28-F397-85DA37F6A86A">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="tip_memorie" id="713815CF-4920-ED58-16E4-8164B911D970">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="cpu_id" id="8AB9680A-255B-7A17-0FDC-CC7873AD9D7A">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="nume" id="D5A2EB57-E542-3EFF-BFDF-BE0A259ACCAB">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="CPU_PK" id="0C510A2D-587F-053C-C646-EB96A2D06B89">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

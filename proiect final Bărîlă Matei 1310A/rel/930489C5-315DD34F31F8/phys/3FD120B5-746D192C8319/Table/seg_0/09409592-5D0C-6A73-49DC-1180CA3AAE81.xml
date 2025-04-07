@@ -1,0 +1,37 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="RAM" directorySegmentName="seg_0" id="09409592-5D0C-6A73-49DC-1180CA3AAE81">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="nume" id="7181C25B-A88B-91C7-5B34-8C5A93FD4BD5">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ram_id" id="72F05F7D-B223-43A6-ECD5-431B075A73E6">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="tip_memorie" id="CCA0920C-B21E-E6C3-B15D-13C491D8C08C">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="RAM_PK" id="7FF3173A-C644-A1B3-4D07-FBFE681C021C">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

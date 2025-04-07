@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="Comanda" directorySegmentName="seg_0" id="6466B801-FC0E-980A-9C3E-F7A267B81908">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="d_id" id="33F81DCC-92EC-28B1-AE22-904CEC776867">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ram_id" id="629428A8-A913-EA4D-963E-459C4E4ADB1A">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="data" id="6798EAD8-EA4C-3A58-7DAD-C24815F3D76C">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="c_id" id="A0133D16-6BC2-BF47-1F15-013362799B90">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+<notnullConstraintnameChanged>true</notnullConstraintnameChanged>
+</ColumnProxy>
+<ColumnProxy name="gpu_id" id="BDC663A5-37BC-3D80-889F-AA6C23138EB0">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="cpu_id" id="EC552C9D-F902-BA4F-09F1-09F6B421FE3E">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="email" id="F8C9A3B7-7BE1-F849-2981-FE1AEB3C6589">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="Comanda__IDXv3" id="5F8D5A53-1FD0-38A9-C5C2-34349B3A238C">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="Comanda__IDXv1" id="7E022A17-E7DD-2C0F-0D6E-F007972BAD01">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="Comanda__IDXv2" id="E5155A30-7CC0-0E47-4C17-28A2389BB9F9">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="Comanda__IDX" id="E7A3995A-9FB3-17E4-0AC3-1175A04DD01C">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="Comanda_GPU_fk" id="7C83D363-C0C7-3A17-A11A-F653C0BF67E3">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="Comanda_CPU_fk" id="9021B462-7B84-EACC-8A3E-859201801967">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="Comanda_Detalii_comanda" id="B8B26591-B74E-993D-1AC8-D758F7B0BC4D">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="Comanda_RAM_fk" id="DF4D72E9-A4B5-19D5-C582-09DFB5F2F20D">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="Comanda_PK" id="CB8CFB23-58FB-5A25-7F91-DB9C22EFBAC4">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

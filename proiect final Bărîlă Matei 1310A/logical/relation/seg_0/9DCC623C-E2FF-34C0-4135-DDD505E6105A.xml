@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="CPU_GPU" directorySegmentName="seg_0" id="9DCC623C-E2FF-34C0-4135-DDD505E6105A">
+<createdBy>user</createdBy>
+<createdTime>2024-10-26 08:53:14 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<engineerTo>
+<item key="930489C5-81E3-14B3-59F4-315DD34F31F8" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>D5CF9E52-8659-FF99-2686-7F3947FA0C9B</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>96C2A006-0D81-B34D-5FDF-63CC2FA170D2</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

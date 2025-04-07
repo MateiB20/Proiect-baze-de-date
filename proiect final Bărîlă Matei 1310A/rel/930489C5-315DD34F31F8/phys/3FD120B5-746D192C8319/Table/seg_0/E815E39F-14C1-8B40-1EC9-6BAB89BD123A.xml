@@ -1,0 +1,43 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="CPU_RAM" directorySegmentName="seg_0" id="E815E39F-14C1-8B40-1EC9-6BAB89BD123A">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="RAM_ram_id" id="24B423A9-7492-7582-581E-2346233F6AF5">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CPU_cpu_id" id="A35CE5B0-D1EF-A1C4-891A-1E8845EAE949">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="CPU_RAM_RAM_FK" id="301541BD-8033-F83E-1B9C-17CE3EC3F662">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="CPU_RAM_CPU_FK" id="DFA3DE30-372A-CED5-60B4-C74406A76854">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="CPU_RAM_PK" id="BACF6D41-D529-26B8-E1D1-768FB67AAE8E">
+<createdBy>user</createdBy>
+<createdTime>2024-11-19 12:48:38 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

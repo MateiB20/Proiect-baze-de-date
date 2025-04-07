@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="133C300A-C1F1-B33B-5086-E1F3FA4FECBA" containerWithKeyObject="1D847B60-118F-2D40-6AB4-FF4921E68D56" localFKIndex="536E26F8-F7A1-C17C-710D-B533110C623F" name="CPU_GPU_GPU_FK">
+<createdBy>user</createdBy>
+<createdTime>2024-10-26 09:09:31 UTC</createdTime>
+<generatorID>9DCC623C-E2FF-34C0-4135-DDD505E6105A</generatorID>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<referredTableLongName>GPU</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>806ED861-5A61-EBD7-3E8A-9DD15221077F</referredTableID>
+<keyObject>52CED16B-52A1-E81E-7ED3-65DFF815E654</keyObject>
+<referredKeyID>52CED16B-52A1-E81E-7ED3-65DFF815E654</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>gpu_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,246 @@
+CREATE TABLE comanda (
+    c_id   NUMBER(8) NOT NULL,
+    email  VARCHAR2(320) NOT NULL,
+    data   DATE NOT NULL,
+    ram_id NUMBER(8) NOT NULL,
+    gpu_id NUMBER(8) NOT NULL,
+    cpu_id NUMBER(8) NOT NULL,
+    d_id   NUMBER(8) NOT NULL
+);
+
+ALTER TABLE comanda
+    ADD CONSTRAINT comanda_email_ck 
+    CHECK ( REGEXP_LIKE (email, '^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$', 'i') );
+
+CREATE UNIQUE INDEX comanda__idx ON
+    comanda (
+        cpu_id
+    ASC );
+
+CREATE UNIQUE INDEX comanda__idxv1 ON
+    comanda (
+        gpu_id
+    ASC );
+
+CREATE UNIQUE INDEX comanda__idxv2 ON
+    comanda (
+        ram_id
+    ASC );
+
+CREATE UNIQUE INDEX comanda__idxv3 ON
+    comanda (
+        d_id
+    ASC );
+
+ALTER TABLE comanda ADD CONSTRAINT comanda_pk PRIMARY KEY ( c_id );
+
+CREATE TABLE cpu (
+    cpu_id      NUMBER(8) NOT NULL,
+    nume        VARCHAR2(60) NOT NULL,
+    tip_memorie NUMBER(5) NOT NULL,
+    slot_pcie   NUMBER(1) NOT NULL
+);
+
+ALTER TABLE cpu ADD CONSTRAINT cpu_tip_memorie_ck CHECK ( tip_memorie LIKE 'DDR%' );
+
+ALTER TABLE cpu
+    ADD CONSTRAINT cpu_slot_pcie_ck CHECK ( slot_pcie IN ( 0, 1 ) );
+
+ALTER TABLE cpu ADD CONSTRAINT cpu_pk PRIMARY KEY ( cpu_id );
+
+CREATE TABLE cpu_gpu (
+    cpu_cpu_id NUMBER(8) NOT NULL,
+    gpu_gpu_id NUMBER(8) NOT NULL
+);
+
+ALTER TABLE cpu_gpu ADD CONSTRAINT cpu_gpu_pk PRIMARY KEY ( cpu_cpu_id,
+                                                            gpu_gpu_id );
+
+CREATE TABLE cpu_ram (
+    cpu_cpu_id NUMBER(8) NOT NULL,
+    ram_ram_id NUMBER(8) NOT NULL
+);
+
+ALTER TABLE cpu_ram ADD CONSTRAINT cpu_ram_pk PRIMARY KEY ( cpu_cpu_id,
+                                                            ram_ram_id );
+
+CREATE TABLE detalii_comanda (
+    d_id          NUMBER(8) NOT NULL,
+    adresa        VARCHAR2(60) NOT NULL,
+    numar_telefon VARCHAR2(10) NOT NULL,
+    data_livrare  DATE NOT NULL
+);
+
+ALTER TABLE detalii_comanda ADD CONSTRAINT d_c_numar_telefon_ck CHECK (numar_telefon LIKE '07__________');
+
+ALTER TABLE detalii_comanda ADD CONSTRAINT detalii_comanda_pk PRIMARY KEY ( d_id );
+
+CREATE TABLE gpu (
+    gpu_id    NUMBER(8) NOT NULL,
+    nume      VARCHAR2(60) NOT NULL,
+    slot_pcie NUMBER(1) NOT NULL
+);
+
+ALTER TABLE gpu
+    ADD CONSTRAINT gpu_slot_pcie_ck CHECK ( slot_pcie IN ( 0, 1 ) );
+
+ALTER TABLE gpu ADD CONSTRAINT gpu_pk PRIMARY KEY ( gpu_id );
+
+CREATE TABLE ram (
+    ram_id      NUMBER(8) NOT NULL,
+    nume        VARCHAR2(60) NOT NULL,
+    tip_memorie NUMBER(1) NOT NULL
+);
+
+ALTER TABLE ram ADD CONSTRAINT ram_tip_memorie_ck CHECK ( tip_memorie LIKE 'DDR%' );
+
+ALTER TABLE ram ADD CONSTRAINT ram_pk PRIMARY KEY ( ram_id );
+
+ALTER TABLE comanda
+    ADD CONSTRAINT comanda_cpu_fk FOREIGN KEY ( cpu_id )
+        REFERENCES cpu ( cpu_id );
+
+ALTER TABLE comanda
+    ADD CONSTRAINT comanda_detalii_comanda FOREIGN KEY ( d_id )
+        REFERENCES detalii_comanda ( d_id );
+
+ALTER TABLE comanda
+    ADD CONSTRAINT comanda_gpu_fk FOREIGN KEY ( gpu_id )
+        REFERENCES gpu ( gpu_id );
+
+ALTER TABLE comanda
+    ADD CONSTRAINT comanda_ram_fk FOREIGN KEY ( ram_id )
+        REFERENCES ram ( ram_id );
+
+ALTER TABLE cpu_gpu
+    ADD CONSTRAINT cpu_gpu_cpu_fk FOREIGN KEY ( cpu_cpu_id )
+        REFERENCES cpu ( cpu_id );
+
+ALTER TABLE cpu_gpu
+    ADD CONSTRAINT cpu_gpu_gpu_fk FOREIGN KEY ( gpu_gpu_id )
+        REFERENCES gpu ( gpu_id );
+
+ALTER TABLE cpu_ram
+    ADD CONSTRAINT cpu_ram_cpu_fk FOREIGN KEY ( cpu_cpu_id )
+        REFERENCES cpu ( cpu_id );
+
+ALTER TABLE cpu_ram
+    ADD CONSTRAINT cpu_ram_ram_fk FOREIGN KEY ( ram_ram_id )
+        REFERENCES ram ( ram_id );
+
+CREATE SEQUENCE comanda_c_id_seq START WITH 1 NOCACHE ORDER;
+
+CREATE OR REPLACE TRIGGER comanda_c_id_trg BEFORE
+    INSERT ON comanda
+    FOR EACH ROW
+    WHEN ( new.c_id IS NULL )
+BEGIN
+    :new.c_id := comanda_c_id_seq.nextval;
+END;
+/
+
+CREATE SEQUENCE cpu_cpu_id_seq START WITH 1 NOCACHE ORDER;
+
+CREATE OR REPLACE TRIGGER cpu_cpu_id_trg BEFORE
+    INSERT ON cpu
+    FOR EACH ROW
+    WHEN ( new.cpu_id IS NULL )
+BEGIN
+    :new.cpu_id := cpu_cpu_id_seq.nextval;
+END;
+/
+
+CREATE SEQUENCE detalii_comanda_d_id_seq START WITH 1 NOCACHE ORDER;
+
+CREATE OR REPLACE TRIGGER detalii_comanda_d_id_trg BEFORE
+    INSERT ON detalii_comanda
+    FOR EACH ROW
+    WHEN ( new.d_id IS NULL )
+BEGIN
+    :new.d_id := detalii_comanda_d_id_seq.nextval;
+END;
+/
+
+CREATE SEQUENCE gpu_gpu_id_seq START WITH 1 NOCACHE ORDER;
+
+CREATE OR REPLACE TRIGGER gpu_gpu_id_trg BEFORE
+    INSERT ON gpu
+    FOR EACH ROW
+    WHEN ( new.gpu_id IS NULL )
+BEGIN
+    :new.gpu_id := gpu_gpu_id_seq.nextval;
+END;
+/
+
+CREATE SEQUENCE ram_ram_id_seq START WITH 1 NOCACHE ORDER;
+
+CREATE OR REPLACE TRIGGER ram_ram_id_trg BEFORE
+    INSERT ON ram
+    FOR EACH ROW
+    WHEN ( new.ram_id IS NULL )
+BEGIN
+    :new.ram_id := ram_ram_id_seq.nextval;
+END;
+/
+
+CREATE OR REPLACE TRIGGER trg_Comanda_BRIU 
+    BEFORE INSERT OR UPDATE ON Comanda 
+    FOR EACH ROW 
+BEGIN
+	IF(:new.data <= SYSDATE )
+	THEN
+		RAISE_APPLICATION_ERROR(-20001,
+			'Data invalida: ' || TO_CHAR(:new.data, 'DD:MM:YYYY HH24:MI:SS') || ' trebuie sa fie mai mare decat data curenta. ');
+	END IF;
+END; 
+/
+
+CREATE OR REPLACE TRIGGER trg_cpu_ram_BRIU
+BEFORE INSERT OR UPDATE ON comanda
+FOR EACH ROW
+DECLARE
+    v_ram_memorie VARCHAR2(5);
+    v_cpu_memorie VARCHAR2(5);
+BEGIN
+    SELECT tip_memorie INTO v_ram_memorie
+    FROM ram
+    WHERE ram_id = :new.ram_id;
+    SELECT tip_memorie INTO v_cpu_memorie
+    FROM cpu
+    WHERE cpu_id = :new.cpu_id;
+    IF v_ram_memorie != v_cpu_memorie THEN
+        RAISE_APPLICATION_ERROR(-20001, 'tip memorie invalid');
+    END IF;
+END;
+/
+
+CREATE OR REPLACE TRIGGER trig_cpu_gpu_BRIU
+BEFORE INSERT OR UPDATE ON comanda
+FOR EACH ROW
+DECLARE
+    v_gpu_pcie_slot NUMBER(1);
+    v_cpu_pcie_slot NUMBER(1);
+BEGIN
+    SELECT slot_pcie INTO v_gpu_pcie_slot
+    FROM gpu
+    WHERE gpu_id = :new.gpu_id;
+    SELECT slot_pcie INTO v_cpu_pcie_slot
+    FROM cpu
+    WHERE cpu_id = :new.cpu_id;
+    IF v_gpu_pcie_slot !=  v_cpu_pcie_slot THEN
+        RAISE_APPLICATION_ERROR(-20001, 'slot pcie invalid');
+    END IF;
+END;
+/
+
+CREATE OR REPLACE TRIGGER trg_Detalii_Comanda_BRIU 
+    BEFORE INSERT OR UPDATE ON Detalii_Comanda 
+    FOR EACH ROW 
+BEGIN
+	IF(:new.data_livrare <= SYSDATE )
+	THEN
+		RAISE_APPLICATION_ERROR(-20001,
+			'Data invalida: ' || TO_CHAR(:new.data_livrare, 'DD:MM:YYYY HH24:MI:SS') || ' trebuie sa fie mai mare decat data curenta. ');
+	END IF;
+END; 
+/

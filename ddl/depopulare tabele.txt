@@ -1,0 +1,71 @@
+delete from comanda;
+delete from cpu;
+delete from detalii_comanda;
+delete from gpu;
+delete from ram;
+
+
+
+drop sequence comanda_c_id_seq;
+drop sequence cpu_cpu_id_seq;
+drop sequence detalii_comanda_d_id_seq;
+drop sequence gpu_gpu_id_seq;
+drop sequence ram_ram_id_seq;
+
+
+
+
+CREATE SEQUENCE comanda_c_id_seq START WITH 1 NOCACHE ORDER;
+
+CREATE OR REPLACE TRIGGER comanda_c_id_trg BEFORE
+    INSERT ON comanda
+    FOR EACH ROW
+    WHEN ( new.c_id IS NULL )
+BEGIN
+    :new.c_id := comanda_c_id_seq.nextval;
+END;
+/
+
+CREATE SEQUENCE cpu_cpu_id_seq START WITH 1 NOCACHE ORDER;
+
+CREATE OR REPLACE TRIGGER cpu_cpu_id_trg BEFORE
+    INSERT ON cpu
+    FOR EACH ROW
+    WHEN ( new.cpu_id IS NULL )
+BEGIN
+    :new.cpu_id := cpu_cpu_id_seq.nextval;
+END;
+/
+
+CREATE SEQUENCE detalii_comanda_d_id_seq START WITH 1 NOCACHE ORDER;
+
+CREATE OR REPLACE TRIGGER detalii_comanda_d_id_trg BEFORE
+    INSERT ON detalii_comanda
+    FOR EACH ROW
+    WHEN ( new.d_id IS NULL )
+BEGIN
+    :new.d_id := detalii_comanda_d_id_seq.nextval;
+END;
+/
+
+CREATE SEQUENCE gpu_gpu_id_seq START WITH 1 NOCACHE ORDER;
+
+CREATE OR REPLACE TRIGGER gpu_gpu_id_trg BEFORE
+    INSERT ON gpu
+    FOR EACH ROW
+    WHEN ( new.gpu_id IS NULL )
+BEGIN
+    :new.gpu_id := gpu_gpu_id_seq.nextval;
+END;
+/
+
+CREATE SEQUENCE ram_ram_id_seq START WITH 1 NOCACHE ORDER;
+
+CREATE OR REPLACE TRIGGER ram_ram_id_trg BEFORE
+    INSERT ON ram
+    FOR EACH ROW
+    WHEN ( new.ram_id IS NULL )
+BEGIN
+    :new.ram_id := ram_ram_id_seq.nextval;
+END;
+/

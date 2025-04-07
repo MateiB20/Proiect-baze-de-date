@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Comanda_CPU_fk" directorySegmentName="seg_0" id="B9567367-ED6B-9952-1CC8-E4FCE3AF583E">
+<createdBy>user</createdBy>
+<createdTime>2024-11-05 12:39:13 UTC</createdTime>
+<ownerDesignName>proiect final Bărîlă Matei 1310A</ownerDesignName>
+<engineerTo>
+<item key="930489C5-81E3-14B3-59F4-315DD34F31F8" value="true"/>
+</engineerTo>
+<sourcePk>37C010FD-DF22-2A39-22A2-65DAC5329C49</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>face parte din</nameOnSource>
+<nameOnTarget>contine o componenta</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>D5CF9E52-8659-FF99-2686-7F3947FA0C9B</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>0E89F139-3584-9060-99A3-893F013DF6C2</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
