@@ -1,8 +1,4 @@
- 
-Universitatea Tehnică “Gheorghe Asachi” Iași
-Facultatea Automatică și Calculatoare
-Specializarea Calculatoare și Tehnologia Informației
-Disciplina: Baze de date-proiect
+Baze de date-proiect
 
 
 Baza de date a unui magazin de pachete de construcție PC
@@ -13,8 +9,7 @@ Baza de date a unui magazin de pachete de construcție PC
 
 
 
-Student: Bărîlă Matei  		
-Grupa:1310A
+Bărîlă Matei  		
 
 Scopul aplicației:
 Analiza, proiectarea și implementarea unei baze de date care să modeleze un magazin online de pachete de construcție PC care vinde exclusiv plăci RAM, unități centrale de procesare și unități de procesare grafică compatibile între ele.
