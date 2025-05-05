@@ -13,7 +13,7 @@ Baza de date a unui magazin de pachete de construcție PC
 
 
 
-Student: Bărîlă Matei  		Cadru didactic coordonator: Cătălin Mironeanu
+Student: Bărîlă Matei  		
 Grupa:1310A
 
 Scopul aplicației:
